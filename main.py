@@ -1,3 +1,8 @@
 import modules
+from datetime import datetime
 
-print(modules.requestAPI(20241021))
+today = datetime.today()
+req = int(str(today.year) + str(today.month) + str(today.day))
+
+print(f'today: {req}')
+print(modules.requestAPI(req))
